@@ -1,4 +1,5 @@
 # Django rest
+from django.shortcuts import render
 from rest_framework import generics
 
 # Models
@@ -20,3 +21,8 @@ class PostDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
 
     queryset = Post.objects.all()
     serializer_class = PostSerializer
+
+
+def index(request):
+    """Index view."""
+    return render(request, 'index.html')
