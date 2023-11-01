@@ -45,6 +45,9 @@ INSTALLED_APPS = [
     # Mis apps
     'apps.users.apps.UsersConfig',
     'apps.blogs.apps.BlogsConfig',
+
+    # Django rest_framework
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -131,8 +134,9 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']
 
 # Media files (Images, Videos, etc)
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
